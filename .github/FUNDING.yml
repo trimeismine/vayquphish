@@ -1,2 +1,2 @@
 # These are supported funding model platforms
-yandex:['https://money.yandex.ru/to/410014293163286' ]
+custom :['https://money.yandex.ru/to/410014293163286', yandex ]
