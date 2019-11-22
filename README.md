@@ -1,2 +1,2 @@
 # vayquphish
-Advanced phishing tools with uniq instruments.
+Advanced phishing tools with unique instruments.
