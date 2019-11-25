@@ -1,0 +1,14 @@
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+}
+
+function showPosition(position) {
+        var xhr = new XMLHttpRequest();
+ xhr.open("POST", "write.php?latitude="+position.coords.latitude+"&&longitude="+position.coords.longitude  , true);
+  xhr.send();
+}
+ getLocation();
+</script>
