@@ -43,4 +43,4 @@ cd ../
 echo "${green}setting up permissions\n"
 chmod -R 777 *
 echo "${green}autoremove${greens}\n"
-pkg autoremove -y
+sudo apt autoremove -y
