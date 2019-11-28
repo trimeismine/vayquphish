@@ -33,7 +33,7 @@ mkdir bin
 echo "${green}opening bin directory${greens}\n"
 cd bin
 echo "${green}installing ngrok.zip${greens}\n"
-wget --output-document=ngrok.zip https://bin.equinox.io/a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip
+wget --output-document=ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
 echo "${green}unziping ngrok.zip${greens}\n"
 unzip ngrok.zip
 echo "${green}removing ngrok.zip${greens}\n"
