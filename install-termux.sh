@@ -1,5 +1,7 @@
+#!/bin/bash
 green='\033[1;32m'
 greens='\033[0;32m'
+bit=$(echo "$linuxVersion" | grep 64)
 echo -e "${green}update\n"
 pkg update -y
 echo -e "${green}installing ncftp${greens}\n"
@@ -25,7 +27,11 @@ mkdir bin
 echo "${green}opening bin directory${greens}\n"
 cd bin
 echo -e "${green}installing ngrok.zip${greens}\n"
-wget --output-document=ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+if [ -z "$bit" ]; then
+	wget --output-document=ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+else
+	wget --output-document=ngrok.zip https://bin.equinox.io/a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip
+fi
 echo -e "${green}unziping ngrok.zip${greens}\n"
 unzip ngrok.zip
 echo -e "${green}removing ngrok.zip${greens}\n"
