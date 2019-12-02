@@ -1,9 +1,11 @@
 #!/bin/bash
 green='\033[1;32m'
 greens='\033[0;32m'
-bit=$(echo "$linuxVersion" | grep 64)
+bit=$(uname -m  | grep 64)
 echo -e "${green}update\n"
 pkg update -y
+echo -e "${green}installing jq${greens}\n"
+pkg install jq -y
 echo -e "${green}installing ncftp${greens}\n"
 pkg install ncftp -y
 echo -e "${green}installing php${greens}\n"
