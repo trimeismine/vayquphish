@@ -191,6 +191,14 @@ if [ $methodname = "2" ]; then
 	curl http://127.0.0.1:4040/api/tunnels > ./.data/tunnels.json 
 	data=$(<"./.data/tunnels.json")
 	cat ./.data/tunnels.json | jq '[.tunnels[].public_url]'
+	md1=$(md5sum "./.data/tunnels.json")
+	while true; do
+		md2=$(md5sum "./.data/tunnels.json")
+		if [ "$md1" != "$md2" ] ; then
+		cat ./.data/tunnels.json | jq '[.tunnels[].public_url]'
+		md1=$(md5sum "./.data/tunnels.json")
+		fi
+	done
 fi
 if [ $methodname = "3" ]; then
 	echo -e "${greens}starting php server in 127.0.0.1:3445${reset}\n"
