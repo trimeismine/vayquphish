@@ -1,7 +1,7 @@
 
 # ABOUT
 
-Advanced phishing tools with unique instruments. With vayquphish user can create own phishing sites. 
+Vayquphish advanced phishing tools with unique instruments. With vayquphish user can create own phishing sites. 
 **important**  run vayquphish as a root if u want to open 80 port in localhost
 
 # Execution
