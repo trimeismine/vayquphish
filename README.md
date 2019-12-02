@@ -27,7 +27,7 @@ On termux
 
 ### vayquphish v1.3
 
- - ngrok no url bug fixed
+ - ngrok no URL bug fixed
  - install.sh Illegal number fixed
  
 ### vayquphish v1.2
