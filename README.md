@@ -11,7 +11,7 @@ To download, install and execute the script, run the commands below
 
     git clone https://github.com/MyAITech/vayquphish.git
     cd vayquphish
-    chmod install.sh start.sh
+    chmod 777 install.sh start.sh
     sudo ./install.sh
     ./start.sh
     
@@ -19,7 +19,7 @@ On termux
 
     git clone https://github.com/MyAITech/vayquphish.git
     cd vayquphish
-    chmod install-termux.sh start.sh
+    chmod 777 install-termux.sh start.sh
     ./install-termux.sh
     ./start.sh
 
