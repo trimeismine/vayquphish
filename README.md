@@ -25,11 +25,14 @@ On termux
 
 #  CHANGELOG
 
+### vayquphish v1.3
+
+ - ngrok no url bug fixed
+ - install.sh Illegal number fixed
+ 
 ### vayquphish v1.2
 
  - amd64 support for termux added
- - ngrok no url bug fixed
- - install.sh Illegal number fixed
 
 ### vayquphish v1.1
 
