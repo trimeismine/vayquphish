@@ -192,7 +192,7 @@ if [ $methodname = "2" ]; then
 	md1=$(<"./.data/tunnels.json")
 	mvr=0
 	while true; do
-		curl -s http://127.0.0.1:4040/api/tunnels > ./.data/tunnels.json
+		curl --silent http://127.0.0.1:4040/api/tunnels > ./.data/tunnels.json 
 		md2=$(<"./.data/tunnels.json")
 		if [ "$md1" != "$md2" ] ; then
 			let "mvr++"
