@@ -189,14 +189,18 @@ if [ $methodname = "2" ]; then
 	echo -e "${greens}starting ngrok server${reset}\n"
 	./bin/ngrok http 3445 > /dev/null &
 	curl http://127.0.0.1:4040/api/tunnels > ./.data/tunnels.json 
-	data=$(<"./.data/tunnels.json")
-	cat ./.data/tunnels.json | jq '[.tunnels[].public_url]'
-	md1=$(md5sum "./.data/tunnels.json")
+	md1=$(<"./.data/tunnels.json")
+	mvr=0
 	while true; do
-		md2=$(md5sum "./.data/tunnels.json")
+		curl -s http://127.0.0.1:4040/api/tunnels > ./.data/tunnels.json
+		md2=$(<"./.data/tunnels.json")
 		if [ "$md1" != "$md2" ] ; then
-		cat ./.data/tunnels.json | jq '[.tunnels[].public_url]'
-		md1=$(md5sum "./.data/tunnels.json")
+			let "mvr++"
+			if [ $mvr = 3 ]; then
+				cat ./.data/tunnels.json | jq '[.tunnels[].public_url]'
+				md1=$(<"./.data/tunnels.json")
+				break
+			fi
 		fi
 	done
 fi
