@@ -25,6 +25,10 @@ On termux
 
 #  CHANGELOG
 
+### vayquphish v1.2
+
+ - amd64 support for termux added
+
 ### vayquphish v1.1
 
  - Ngrok support for termux added
