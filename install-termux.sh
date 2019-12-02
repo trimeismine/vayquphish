@@ -44,3 +44,5 @@ echo -e "${green}setting up permissions\n"
 chmod -R 777 *
 echo -e "${green}autoremove${greens}\n"
 apt autoremove -y
+echo -e "${reset}\n"
+exit
